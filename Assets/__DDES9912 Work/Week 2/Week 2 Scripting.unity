@@ -138,10 +138,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::move_up_down
   startPosition: {x: 0, y: 0, z: 0}
   sinOffset: {x: 0, y: 0, z: 0}
-  amplitude: 0
+  amplitude: 10
   sinValue: 0
-  range: 0.4
-  speed: 3
+  range: 0.5
+  speed: 100
 --- !u!1 &229521043 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5908210580814038753, guid: 6d60c19fdba22044588c1adad82c5b6c, type: 3}
@@ -160,6 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   yspeed: 60
+  xspeed: 0
+  zspeed: 0
 --- !u!1 &265912447
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,29 +272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   yspeed: 60
---- !u!1 &799530770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5203417951681385738, guid: 6d60c19fdba22044588c1adad82c5b6c, type: 3}
-  m_PrefabInstance: {fileID: 2014017660}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &799530772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799530770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5709af7680f3b00498603d4e16bacb31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::move_up_down
-  startPosition: {x: 0, y: 0, z: 0}
-  sinOffset: {x: 0, y: 0, z: 0}
-  amplitude: 0
-  sinValue: 0
-  range: 0.4
-  speed: 3
+  xspeed: 0
+  zspeed: 0
 --- !u!1 &819241218 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3133472485042986709, guid: 6d60c19fdba22044588c1adad82c5b6c, type: 3}
@@ -310,7 +291,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10abc292928588046b8c0942e568278e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  yspeed: 10
+  yspeed: 50
+  xspeed: 0
+  zspeed: 0
 --- !u!1 &823861934 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2738668552288327363, guid: 6d60c19fdba22044588c1adad82c5b6c, type: 3}
@@ -329,6 +312,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   yspeed: 60
+  xspeed: 0
+  zspeed: 0
 --- !u!1001 &978479316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -408,6 +393,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   yspeed: 60
+  xspeed: 0
+  zspeed: 0
 --- !u!1 &1289499117 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5448657305297534008, guid: 6d60c19fdba22044588c1adad82c5b6c, type: 3}
@@ -630,6 +617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   yspeed: 60
+  xspeed: 0
+  zspeed: 0
 --- !u!1 &1948157619
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,9 +832,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6983323771130259221, guid: 6d60c19fdba22044588c1adad82c5b6c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1898972598}
-    - targetCorrespondingSourceObject: {fileID: 5203417951681385738, guid: 6d60c19fdba22044588c1adad82c5b6c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 799530772}
   m_SourcePrefab: {fileID: 100100000, guid: 6d60c19fdba22044588c1adad82c5b6c, type: 3}
 --- !u!1 &2103798468 stripped
 GameObject:
@@ -865,6 +851,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   yspeed: 60
+  xspeed: 0
+  zspeed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
