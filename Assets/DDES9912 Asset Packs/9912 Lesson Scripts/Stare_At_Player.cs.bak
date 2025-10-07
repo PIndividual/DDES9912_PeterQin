@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Stare : MonoBehaviour
+public class Stare_At_Player : MonoBehaviour
 {
     public Transform target;
 
