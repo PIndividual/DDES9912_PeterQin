@@ -10,5 +10,6 @@ public class EventOnBump : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         onBump.Invoke();
+        Debug.Log("Bump detected and event invoked");
     }
 }
