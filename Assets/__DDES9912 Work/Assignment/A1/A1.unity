@@ -1327,19 +1327,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 5856315122494570303}
         m_TargetAssemblyTypeName: Spin, Assembly-CSharp
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5856315122494570304}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Pause
+        m_MethodName: Reverse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1351,7 +1339,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 752509897}
         m_TargetAssemblyTypeName: Spin, Assembly-CSharp
-        m_MethodName: Stop
+        m_MethodName: Reverse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1363,7 +1351,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6697621764385910607}
         m_TargetAssemblyTypeName: Spin, Assembly-CSharp
-        m_MethodName: Stop
+        m_MethodName: Reverse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1375,7 +1363,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6482146762631890893}
         m_TargetAssemblyTypeName: Spin, Assembly-CSharp
-        m_MethodName: Stop
+        m_MethodName: Reverse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

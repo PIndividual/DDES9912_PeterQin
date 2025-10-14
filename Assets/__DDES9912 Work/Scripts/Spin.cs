@@ -25,6 +25,15 @@ public class Spin : MonoBehaviour
     
     }
 
+    public void Reverse()
+    {
+        xspeed = xspeed * -1;
+        yspeed = yspeed * -1;
+        zspeed = zspeed * -1;
+        xacceleration = xacceleration * -1;
+        yacceleration = yacceleration * -1;
+        zacceleration = zacceleration * -1;
+    }
     public void Stop()
     {
         xspeed = 0;
