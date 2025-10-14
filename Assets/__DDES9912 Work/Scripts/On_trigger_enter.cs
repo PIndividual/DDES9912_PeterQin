@@ -17,7 +17,7 @@ public class On_trigger_enter : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger entered by " + other.name);
+        //Debug.Log("Trigger entered by " + other.name);
         Condition.Invoke();
     }
 }
