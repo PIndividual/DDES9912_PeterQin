@@ -2890,7 +2890,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Walk_Around
   AI: {fileID: 1646635959}
   target: {fileID: 654363533}
-  activateDistance: 5
+  activateDistance: 10
+  escapeDistance: 4
+  escapeStopDistance: 10
 --- !u!195 &1646635959
 NavMeshAgent:
   m_ObjectHideFlags: 0
