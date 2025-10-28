@@ -6,6 +6,10 @@ public class Chase_Around : MonoBehaviour
 {
     public NavMeshAgent AI;
     public Transform target;
+
+    
+
+    [Header("Chase and Escape settings")]
     public float activateDistance;
     public float escapeDistance;
     public float escapeStopDistance;//run until this far away
