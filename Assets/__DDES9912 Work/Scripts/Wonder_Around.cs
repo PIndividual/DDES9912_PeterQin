@@ -28,7 +28,7 @@ public class Wonder_Around : MonoBehaviour
             AI.SetDestination(newLocation);
 
           
-           // Debug.DrawRay(newLocation, Vector3.up, Color.blue, 1.0f);
+           Debug.DrawRay(newLocation, Vector3.up, Color.blue, 1.0f);
         }
     }
 }
