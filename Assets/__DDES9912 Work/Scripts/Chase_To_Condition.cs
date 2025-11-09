@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 
 
@@ -7,8 +8,12 @@ using UnityEngine.AI;
 public class Chase_To_Condition : MonoBehaviour
 {
     public NavMeshAgent AI;
-    public Transform target;
+    public Transform target1;
+    public Transform target2;
     Animator Animate;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Animator.SetFloat.html
+    public UnityEvent actionOnTarget;
+    //public bool missionComplete;
+
 
 
 
@@ -22,22 +27,26 @@ public class Chase_To_Condition : MonoBehaviour
         AI = GetComponent<NavMeshAgent>();
         Animate = gameObject.GetComponent<Animator>();
         Animate.SetFloat("ReachTarget", 0);
+        //Animate.SetBool("missionComplete", false);
+        //missionComplete = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+        float distanceToTarget = Vector3.Distance(transform.position, target1.position);
 
         if (distanceToTarget < activateDistance) {
-            AI.destination = target.position;
+            AI.destination = target1.position;
         }
         
         if (distanceToTarget < 0.2) {
             Animate.SetFloat("ReachTarget", 1.0f);
+            actionOnTarget.Invoke();
+            //Animate.SetBool("missionComplete", true);
         }
-        Debug.Log(distanceToTarget);
+        //Debug.Log(distanceToTarget);
 
     }
 }
