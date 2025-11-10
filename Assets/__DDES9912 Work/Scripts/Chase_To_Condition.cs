@@ -9,7 +9,7 @@ public class Chase_To_Condition : MonoBehaviour
 {
     public NavMeshAgent AI;
     public Transform target1;
-    public Transform target2;
+    //public Transform target2;
     Animator Animate;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Animator.SetFloat.html
     public UnityEvent actionOnTarget;
     //public bool missionComplete;
