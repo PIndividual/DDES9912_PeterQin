@@ -8,6 +8,7 @@ public class Spin : MonoBehaviour
     public float xacceleration;
     public float zacceleration;
     public float yacceleration;
+    public float maxSpeeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,9 +18,16 @@ public class Spin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Mathf.Abs(xspeed) < maxSpeeed && Mathf.Abs(yspeed) < maxSpeeed && Mathf.Abs(zspeed)< maxSpeeed) {
         xspeed += xacceleration * Time.deltaTime;
         yspeed += yacceleration * Time.deltaTime;
         zspeed += zacceleration * Time.deltaTime;
+        }
+        else if (Mathf.Abs(xspeed)>maxSpeeed || Mathf.Abs(yspeed)>maxSpeeed || Mathf.Abs(zspeed)>maxSpeeed) {
+            xacceleration = 0;
+            yacceleration = 0;
+            zacceleration = 0;
+        } 
     
         transform.Rotate(xspeed * Time.deltaTime, yspeed * Time.deltaTime, zspeed*Time.deltaTime);//Time.deltaTime的含义是每秒的时间，deltaTime代表每两帧之间的时间差，帧率越高数字越低，帧率越低数字越高，因此补全了不同系统之间帧率不同所带来的数字差
     

@@ -389,6 +389,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 10
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!1 &174957995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,6 +2301,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!1 &595653063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,6 +2440,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!1 &675852473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2720,6 +2723,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!1 &703619036
 GameObject:
   m_ObjectHideFlags: 0
@@ -8068,6 +8072,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!1 &806363346
 GameObject:
   m_ObjectHideFlags: 0
@@ -14897,6 +14902,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!1 &1417904350
 GameObject:
   m_ObjectHideFlags: 0
@@ -15298,8 +15304,8 @@ MonoBehaviour:
   AI: {fileID: 1464256924}
   nextCentrePoint: {fileID: 1464256921}
   nextRange: 20
-  finalLocation: {fileID: 1107552745}
-  activateDistance: 0
+  finalLocation: {fileID: 331710813}
+  flexDistance: 5
 --- !u!1 &1490260086
 GameObject:
   m_ObjectHideFlags: 0
@@ -15338,6 +15344,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!64 &1490260088
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15450,7 +15457,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1491097619
 Transform:
   m_ObjectHideFlags: 0
@@ -15697,6 +15704,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!1 &1515060067
 GameObject:
   m_ObjectHideFlags: 0
@@ -16009,7 +16017,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628104579}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -16213,6 +16221,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 400
 --- !u!1 &1634967485
 GameObject:
   m_ObjectHideFlags: 0
@@ -16727,6 +16736,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 10
+  maxSpeeed: 0
 --- !u!1 &1761655755
 GameObject:
   m_ObjectHideFlags: 0
@@ -17280,7 +17290,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 27f8ba0d4292d6b44ba351c6166dc22a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.95
+      value: -26.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27f8ba0d4292d6b44ba351c6166dc22a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17288,7 +17298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27f8ba0d4292d6b44ba351c6166dc22a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.81
+      value: 8.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27f8ba0d4292d6b44ba351c6166dc22a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17442,7 +17452,7 @@ MonoBehaviour:
   missionComplete: 0
   nextCentrePoint: {fileID: 1970187398}
   nextRange: 50
-  timer: 0
+  waitTimeBeforeStill: 3.5
   activateDistance: 500
 --- !u!1 &1983652870
 GameObject:
@@ -17780,6 +17790,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!1 &2124586772
 GameObject:
   m_ObjectHideFlags: 0
@@ -18892,6 +18903,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!82 &5856315122494570304
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19072,6 +19084,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!4 &6645823806269334829
 Transform:
   m_ObjectHideFlags: 0
@@ -19113,6 +19126,7 @@ MonoBehaviour:
   xacceleration: 0
   zacceleration: 0
   yacceleration: 0
+  maxSpeeed: 0
 --- !u!23 &7202271456382814659
 MeshRenderer:
   m_ObjectHideFlags: 0

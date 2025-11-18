@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 //using UnityEngine.Events;
 
 [RequireComponent(typeof(NavMeshAgent))]
@@ -13,8 +14,9 @@ public class Wonder_To_Target : MonoBehaviour
     private Vector3 nextLocation;
     Animator Animate;
     public Transform finalLocation;
-    public float activateDistance;
+    //public float activateDistance;
     private bool stage2;
+    public float flexDistance;//到达最终位置后开始鼓掌的距离
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,25 +30,28 @@ public class Wonder_To_Target : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log (stage2);
+        //Debug.Log (stage2);
         if (stage2 == false)
         {
-            //AI.destination = finalLocation.position;
-            if (AI.remainingDistance <= AI.stoppingDistance)
-            {
-                // 1. 直接在中心点周围的球体内生成一个随机点
-                nextLocation = nextCentrePoint.position + Random.insideUnitSphere * nextRange;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Random-insideUnitSphere.html
 
-                AI.SetDestination(nextLocation);
+                if (AI.remainingDistance <= AI.stoppingDistance)
+                {
+                    
+                    nextLocation = nextCentrePoint.position + Random.insideUnitSphere * nextRange;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Random-insideUnitSphere.html
+                
+                    AI.SetDestination(nextLocation);
 
 
-                //Debug.DrawRay(newLocation, Vector3.up, Color.blue, 1.0f);
-            }
+                    //Debug.DrawRay(newLocation, Vector3.up, Color.blue, 1.0f);
+                }
         }
         else if (stage2 == true)
         {
-            AI.destination = finalLocation.position;
-            if (AI.remainingDistance <= AI.stoppingDistance)
+            AI.destination = finalLocation.position;//可以尝试把这里改成整个结构并抬高stopping distance到一个大一点的数值，从而修复有时碰到的面向方向错误的问题
+            
+            float distanceToTarget = Vector3.Distance(transform.position, finalLocation.position);
+            //Debug.Log (distanceToTarget);
+            if (distanceToTarget< flexDistance)
             {
                 AI.isStopped = true;
                 Animate.SetBool("Clap", true);

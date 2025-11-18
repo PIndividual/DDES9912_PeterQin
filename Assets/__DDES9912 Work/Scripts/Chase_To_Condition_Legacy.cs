@@ -40,7 +40,7 @@ public class Chase_To_Condition_Legacy : MonoBehaviour
             AI.destination = target1.position;
         }
         
-        if (distanceToTarget < 0.2 && 0<distanceToTarget) {
+        if (distanceToTarget < 0.2) {
 
             Animate.SetFloat("ReachTarget", 1.0f);
             actionOnTarget.Invoke();

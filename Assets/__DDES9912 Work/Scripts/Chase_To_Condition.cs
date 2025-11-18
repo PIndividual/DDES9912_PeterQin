@@ -17,7 +17,8 @@ public class Chase_To_Condition : MonoBehaviour
     public Transform nextCentrePoint; //创建新路径点基于的中心位置，可以是某个参照物或者是自身，后者将会起到大范围移动的效果
     public float nextRange; //创建新路径点距离自身当前位置的距离
     private Vector3 nextLocation;
-    public float timer;
+    private float timer;
+    public float waitTimeBeforeStill;
 
 
 
@@ -46,16 +47,16 @@ public class Chase_To_Condition : MonoBehaviour
             AI.destination = target1.position;
         }
         
-        if (distanceToTarget < 0.2 && 0<distanceToTarget) {
+        if (distanceToTarget < 0.2) {
             timer += Time.deltaTime;
-            Animate.SetFloat("ReachTarget", 1.0f);
+            Animate.SetFloat("ReachTarget", 1);
             actionOnTarget.Invoke();
             Animate.SetBool("missionComplete", true);
             missionComplete = true;
         }
 
         if (missionComplete == true) {
-            if ( timer > 3.5){
+            if ( timer > waitTimeBeforeStill){
                 nextLocation = nextCentrePoint.position + Random.insideUnitSphere * nextRange;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Random-insideUnitSphere.html
                 activateDistance = 0;
                 AI.SetDestination(nextLocation);
