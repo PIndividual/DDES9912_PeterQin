@@ -17452,7 +17452,8 @@ MonoBehaviour:
   missionComplete: 0
   nextCentrePoint: {fileID: 1970187398}
   nextRange: 50
-  waitTimeBeforeStill: 3.5
+  waitTimeBeforeStill: 2
+  waitTimeAfterStill: 4
   activateDistance: 500
 --- !u!1 &1983652870
 GameObject:

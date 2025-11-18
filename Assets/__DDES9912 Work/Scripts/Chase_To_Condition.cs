@@ -19,6 +19,7 @@ public class Chase_To_Condition : MonoBehaviour
     private Vector3 nextLocation;
     private float timer;
     public float waitTimeBeforeStill;
+    public float waitTimeAfterStill;
 
 
 
@@ -50,13 +51,16 @@ public class Chase_To_Condition : MonoBehaviour
         if (distanceToTarget < 0.2) {
             timer += Time.deltaTime;
             Animate.SetFloat("ReachTarget", 1);
-            actionOnTarget.Invoke();
-            Animate.SetBool("missionComplete", true);
-            missionComplete = true;
+            if (timer > waitTimeBeforeStill){
+                actionOnTarget.Invoke();
+                Animate.SetBool("missionComplete", true);
+                missionComplete = true;
+            }
+            
         }
 
         if (missionComplete == true) {
-            if ( timer > waitTimeBeforeStill){
+            if ( timer > waitTimeAfterStill){
                 nextLocation = nextCentrePoint.position + Random.insideUnitSphere * nextRange;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Random-insideUnitSphere.html
                 activateDistance = 0;
                 AI.SetDestination(nextLocation);
@@ -64,6 +68,6 @@ public class Chase_To_Condition : MonoBehaviour
 
         }
         //Debug.Log(distanceToTarget);
-        //Debug.Log(timer);
+        Debug.Log(timer);
     }
 }
