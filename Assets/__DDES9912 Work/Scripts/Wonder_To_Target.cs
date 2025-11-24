@@ -1,7 +1,6 @@
 
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UIElements;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(NavMeshAgent))]
