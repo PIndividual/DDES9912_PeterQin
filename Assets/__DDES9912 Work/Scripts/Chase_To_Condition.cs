@@ -36,6 +36,7 @@ public class Chase_To_Condition : MonoBehaviour
         Animate.SetBool("missionComplete", false);
         missionComplete = false;
         timer = 0;
+        activateDistance = 500;
     }
 
     // Update is called once per frame
@@ -43,6 +44,7 @@ public class Chase_To_Condition : MonoBehaviour
     {
         
         float distanceToTarget = Vector3.Distance(transform.position, target1.position);
+        
 
         if (distanceToTarget < activateDistance) {
             AI.destination = target1.position;
@@ -64,10 +66,11 @@ public class Chase_To_Condition : MonoBehaviour
                 nextLocation = nextCentrePoint.position + Random.insideUnitSphere * nextRange;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Random-insideUnitSphere.html
                 activateDistance = 0;
                 AI.SetDestination(nextLocation);
+                Debug.DrawRay(nextLocation, Vector3.up, Color.blue, 1.0f);
             }
 
         }
         //Debug.Log(distanceToTarget);
-        Debug.Log(timer);
+        //Debug.Log(timer);
     }
 }

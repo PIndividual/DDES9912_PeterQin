@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
-//using UnityEngine.Events;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class Wonder_To_Target : MonoBehaviour
@@ -17,6 +17,7 @@ public class Wonder_To_Target : MonoBehaviour
     //public float activateDistance;
     private bool stage2;
     public float flexDistance;//到达最终位置后开始鼓掌的距离
+    public UnityEvent clap;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,6 +56,7 @@ public class Wonder_To_Target : MonoBehaviour
             {
                 AI.isStopped = true;
                 Animate.SetBool("Clap", true);
+                clap.Invoke();
             }
         }
 
