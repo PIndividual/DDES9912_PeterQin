@@ -15,6 +15,7 @@ public class Wonder_To_Target : MonoBehaviour
     public Transform finalLocation;
     //public float activateDistance;
     private bool stage2;
+    private bool clapFlag = false;
     public float flexDistance;//到达最终位置后开始鼓掌的距离
     public UnityEvent clap;
 
@@ -55,7 +56,14 @@ public class Wonder_To_Target : MonoBehaviour
             {
                 AI.isStopped = true;
                 Animate.SetBool("Clap", true);
-                clap.Invoke();
+
+                if(!clapFlag)
+                {
+                    clap.Invoke();
+                  
+                    clapFlag = true;
+                }
+                
             }
         }
 
