@@ -8,15 +8,15 @@ public class Wonder_To_Target : MonoBehaviour
 {
 
     public NavMeshAgent AI;
-    public Transform nextCentrePoint; //创建新路径点基于的中心位置，可以是某个参照物或者是自身，后者将会起到大范围移动的效果
-    public float nextRange; //创建新路径点距离自身当前位置的距离
+    public Transform nextCentrePoint; //The center point for next path point
+    public float nextRange; //The range for next path point
     private Vector3 nextLocation;
     Animator Animate;
     public Transform finalLocation;
     //public float activateDistance;
     private bool stage2;
     private bool clapFlag = false;
-    public float flexDistance;//到达最终位置后开始鼓掌的距离
+    public float flexDistance;//Leaving a space so the NPC won't get too close
     public UnityEvent clap;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -42,13 +42,11 @@ public class Wonder_To_Target : MonoBehaviour
                 
                     AI.SetDestination(nextLocation);
 
-
-                    //Debug.DrawRay(newLocation, Vector3.up, Color.blue, 1.0f);
                 }
         }
         else if (stage2 == true)
         {
-            AI.destination = finalLocation.position;//可以尝试把这里改成整个结构并抬高stopping distance到一个大一点的数值，从而修复有时碰到的面向方向错误的问题
+            AI.destination = finalLocation.position;
             
             float distanceToTarget = Vector3.Distance(transform.position, finalLocation.position);
             //Debug.Log (distanceToTarget);
@@ -57,7 +55,7 @@ public class Wonder_To_Target : MonoBehaviour
                 AI.isStopped = true;
                 Animate.SetBool("Clap", true);
 
-                if(!clapFlag)
+                if(!clapFlag)//This prevents the function to keep getting called every frame, causing audio issue
                 {
                     clap.Invoke();
                   

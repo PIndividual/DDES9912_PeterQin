@@ -22,14 +22,14 @@ public class Countdown_function : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= countdownTime)
             {
-                Debug.Log("Countdown finished!");
+                
                 onCountdownFinished.Invoke();
                 timer = 0f; // Reset timer if you want to repeat the countdown
                 isActivated = false;
             }
         }
-        Debug.Log(timer);
-        Debug.Log(isActivated);
+        //Debug.Log(timer);
+        //Debug.Log(isActivated);
     }
      public void ActivateCountdown()
     {

@@ -14,8 +14,8 @@ public class Chase_To_Condition : MonoBehaviour
     public UnityEvent actionOnTarget;
     public bool missionComplete;
     //Ported from Wonder_Around
-    public Transform nextCentrePoint; //创建新路径点基于的中心位置，可以是某个参照物或者是自身，后者将会起到大范围移动的效果
-    public float nextRange; //创建新路径点距离自身当前位置的距离
+    public Transform nextCentrePoint; //The center point for next path point
+    public float nextRange; //The range for next path point
     private Vector3 nextLocation;
     private float timer;
     public float waitTimeBeforeStill;
@@ -66,7 +66,7 @@ public class Chase_To_Condition : MonoBehaviour
                 nextLocation = nextCentrePoint.position + Random.insideUnitSphere * nextRange;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Random-insideUnitSphere.html
                 activateDistance = 0;
                 AI.SetDestination(nextLocation);
-                Debug.DrawRay(nextLocation, Vector3.up, Color.blue, 1.0f);
+
             }
 
         }

@@ -7,8 +7,8 @@ public class Wonder_Around : MonoBehaviour
 {
 
     public NavMeshAgent AI;
-    public Transform nextCentrePoint; //创建新路径点基于的中心位置，可以是某个参照物或者是自身，后者将会起到大范围移动的效果
-    public float nextRange; //创建新路径点距离自身当前位置的距离
+    public Transform nextCentrePoint; //The center point for next path point
+    public float nextRange; //The range for next path point
     private Vector3 nextLocation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,13 +22,13 @@ public class Wonder_Around : MonoBehaviour
     {
         if (AI.remainingDistance <= AI.stoppingDistance)
         {
-            // 1. 直接在中心点周围的球体内生成一个随机点
+            // Gebnnerate a new random location within the range around the centre point (in a sphere)
             nextLocation = nextCentrePoint.position + Random.insideUnitSphere * nextRange;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Random-insideUnitSphere.html
 
             AI.SetDestination(nextLocation);
 
           
-           //Debug.DrawRay(newLocation, Vector3.up, Color.blue, 1.0f);
+           
         }
     }
 }
