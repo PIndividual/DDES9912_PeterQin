@@ -66,7 +66,7 @@ public class Chase_To_Condition : MonoBehaviour
                 nextLocation = nextCentrePoint.position + Random.insideUnitSphere * nextRange;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Random-insideUnitSphere.html
                 activateDistance = 0;
                 AI.SetDestination(nextLocation);
-
+                //Debug.DrawRay(nextLocation, Vector3.up, Color.blue, 1.0f); https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Debug.DrawRay.html
             }
 
         }
