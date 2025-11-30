@@ -12,6 +12,7 @@ public class Chase_To_Condition : MonoBehaviour
     //public Transform target2;
     Animator Animate;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Animator.SetFloat.html
     public UnityEvent actionOnTarget;
+    public UnityEvent actionAfter;
     public bool missionComplete;
     //Ported from Wonder_Around
     public Transform nextCentrePoint; //The center point for next path point
@@ -20,6 +21,7 @@ public class Chase_To_Condition : MonoBehaviour
     private float timer;
     public float waitTimeBeforeStill;
     public float waitTimeAfterStill;
+    private bool actionDone = false;
 
 
 
@@ -66,6 +68,11 @@ public class Chase_To_Condition : MonoBehaviour
                 nextLocation = nextCentrePoint.position + Random.insideUnitSphere * nextRange;//https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Random-insideUnitSphere.html
                 activateDistance = 0;
                 AI.SetDestination(nextLocation);
+                if (!actionDone) {
+                    actionAfter.Invoke();
+                    actionDone = true;
+                }
+                
                 //Debug.DrawRay(nextLocation, Vector3.up, Color.blue, 1.0f); //https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Debug.DrawRay.html
             }
 

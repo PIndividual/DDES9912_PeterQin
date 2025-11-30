@@ -1,16 +1,34 @@
-# Overview
+# Toy-circling Aeroplane Unity Implementation with EZPZ Toolkit
+
+This project, as a duplication of the EZPZ-Toolkit, aims to learn basic Unity applications and build an interactive Unity scene to replicate the Toy-circling Aeroplane in the Powerhouse Collection by implementing its main functionality with some modifications.
+
+The main scene for the Toy-circling Aeroplane can be found here: DDES9912_PeterQin\Assets\__DDES9912
+Work\Assignment\A2\A2.unity
+
+Link to the object in Powerhouse: https://collection.powerhouse.com.au/object/41739
+
+---
+
+
+
+# EZPZ Toolkit Overview
+
 Quick prototyping interaction toolkit intended for non coders or Unity beginners.
 
-Quick, 23 minute video guide below: 
+Quick, 23 minute video guide below:
+
 * https://youtu.be/mIoewQ2zQBI
 
 Unity, quick reminder videos (most less than 2 mins):
+
 * https://www.youtube.com/playlist?list=PLZP8wzCUfgsIQBKy3F4EwIlDgjX4_JypG
 
 Specific, EZPZ toolkit video guides:
+
 * https://www.youtube.com/playlist?list=PLZP8wzCUfgsKfgJDXuiHHAw-qjcEev1k-
 
 # Licensing Info
+
 by Matt Cabanag https://www.linkedin.com/in/mattavc/
 
 MIT License:
@@ -22,10 +40,12 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
------
+---
+
 Above copyright notice does not include the dependencies used below:
 
 3rd Party Assets Used:
+
 * https://assetstore.unity.com/packages/essentials/starter-assets-first-person-character-controller-196525
 * https://assetstore.unity.com/packages/tools/network/rest-client-for-unity-102501
 * https://www.clipartmax.com/download/m2i8H7G6d3K9N4N4_the-mouse-cursor-click-icon-shown-click-icon/
@@ -39,4 +59,3 @@ Above copyright notice does not include the dependencies used below:
 
 Google images for:
 Peppa Pig, Gundam, Elmo, Doraemon, Poo plush toy
-
